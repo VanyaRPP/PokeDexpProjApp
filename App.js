@@ -1,10 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import styled from 'styled-components'
 import { PokeItem, PokeView } from './components';
 
+import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Tab = createBottomTabNavigator();
 
 function SettingsScreen() {
   return (
@@ -13,8 +16,6 @@ function SettingsScreen() {
     </View>
   );
 }
-
-const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
@@ -25,13 +26,15 @@ const App = () => {
         color2='#3ae831'
       />
       <PokeItem />
-      {/* <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={PokeItem} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer> */}
-    </View>
+      <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen name="Home" component={PokeItem} />
+          <Tab.Screen name="Settings" component={SettingsScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+
+    </View> 
+    
   );
 };
 

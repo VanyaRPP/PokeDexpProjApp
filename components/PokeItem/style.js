@@ -8,7 +8,9 @@ export const PokeRectangle = styled.TouchableOpacity`
   display: flex;
   margin-top: 50px;
   width: ${window-40};
-  height: 100%;
+  /* border-color: black;
+  border-width: 1px;
+  border-radius: 50; */
 `;
 export const PokeInfo = styled.View`
   display: flex;
