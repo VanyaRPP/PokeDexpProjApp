@@ -25,7 +25,7 @@ export const PokeItem = () => {
             <PokeInfoType>
               <ImageItem
                 source={{
-                  uri: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png'
+                  uri: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
                 }}
               />
               <PokeType>
