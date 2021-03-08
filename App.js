@@ -7,6 +7,7 @@ import 'react-native-gesture-handler';
 import { Portal } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { PokeScreen } from './screen/PokeScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,7 +28,7 @@ const App = () => {
     <NavigationContainer>
       <Portal.Host>
         <Tab.Navigator>
-          <Tab.Screen name="Home" component={PokeItem} />
+          <Tab.Screen name="Home" component={PokeScreen} />
           <Tab.Screen name="Home1" component={SettingsScreen} />
           <Tab.Screen name="Home12" component={PokeItem} />
           <Tab.Screen name="Home31" component={SettingsScreen} />
