@@ -1,5 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
+import { FilterIcon } from '../../assets/images/FilterIcon'
+import { PokeBallIcon } from '../../assets/images/PokeBallIcon'
 import { PokeView } from '../../components'
 import { MainView, PokeWrapper } from './style'
 
@@ -8,7 +10,7 @@ export const PokeScreen = () => {
     <MainView>
       <PokeWrapper>
         <Text>
-          XYU
+          XYi
         </Text>
         <PokeView
           url='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
