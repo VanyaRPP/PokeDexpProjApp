@@ -6,6 +6,7 @@ import { PokeScreen } from '../screen/PokeScreen';
 import { PokeItem } from '../components';
 import { FilterIcon } from '../assets/images/FilterIcon';
 import { PokeBallIcon, RegionsIcon } from '../assets/images';
+import SettingsIcon from '../assets/images/SettingsIcon';
 
 const BottomTab = createBottomTabNavigator();
 const widthIcon = '28';
@@ -44,7 +45,6 @@ const tabs = [
           <PokeBallIcon />
         ),
       tabBarLabel: ' ',
-
     },
   },
   {
@@ -64,7 +64,7 @@ const tabs = [
     options: {
       tabBarIcon: () =>
         IconNavigation(
-          <FilterIcon />
+          <SettingsIcon />
         ),
       tabBarLabel: ' ',
     },
