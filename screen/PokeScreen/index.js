@@ -9,9 +9,6 @@ export const PokeScreen = () => {
   return (
     <MainView>
       <PokeWrapper>
-        <Text>
-          XYi
-        </Text>
         <PokeView
           url='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
           color1='#bf2ac9'

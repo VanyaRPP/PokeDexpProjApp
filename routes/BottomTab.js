@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { PokeScreen } from '../screen/PokeScreen';
 import { PokeItem } from '../components';
@@ -12,7 +12,6 @@ const widthIcon = '28';
 const heightIcon = '25';
 const inactiveTintColor = 'red';
 
-
 const tabs = [
   {
     name: 'Weightlifting',
@@ -20,7 +19,6 @@ const tabs = [
     options: {
       tabBarIcon: () =>
         IconNavigation(
-          // @ts-ignore
           <FilterIcon />
         ),
       tabBarLabel: ' ',
@@ -28,11 +26,10 @@ const tabs = [
   },
   {
     name: 'Trajectory',
-    component: PokeItem,
+    component: PokeScreen,
     options: {
       tabBarIcon: () =>
         IconNavigation(
-          // @ts-ignore
           <RegionsIcon />
         ),
       tabBarLabel: ' ',
@@ -44,12 +41,10 @@ const tabs = [
     options: {
       tabBarIcon: () =>
         IconNavigation(
-          // @ts-ignore
           <PokeBallIcon />
-          
         ),
       tabBarLabel: ' ',
-      
+
     },
   },
   {
@@ -58,7 +53,6 @@ const tabs = [
     options: {
       tabBarIcon: () =>
         IconNavigation(
-          // @ts-ignore
           <FilterIcon />
         ),
       tabBarLabel: ' ',
@@ -70,8 +64,7 @@ const tabs = [
     options: {
       tabBarIcon: () =>
         IconNavigation(
-          // @ts-ignore
-          <FilterIcon /> 
+          <FilterIcon />
         ),
       tabBarLabel: ' ',
     },
@@ -86,8 +79,6 @@ export default function BottomTabNavigator() {
         activeTintColor: 'black',
         inactiveTintColor: 'red',
         style: styles.navigatorStyle,
-        
-        
       }}>
       {tabs.map((screen, index) => {
         return (

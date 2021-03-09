@@ -9,8 +9,5 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'absolute',
-    // borderTopWidth: 1,
-    // borderTopColor: 'blue',
-    
 },
 });

@@ -4,7 +4,13 @@ import Svg, { Circle, Path } from "react-native-svg";
 
 export const PokeBallIcon = (props) =>{
   return (
-    <View style={{marginBottom: 20, border: 2, borderColor: 'black', borderWidth: 2}}>
+    <View
+      style={{
+        marginBottom: 20,
+        borderColor: 'black',
+        borderWidth: 1
+      }}
+      >
       <Svg
         xmlns="http://www.w3.org/2000/svg"
         width={80}

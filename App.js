@@ -28,13 +28,6 @@ const App = () => {
   return (
     <NavigationContainer>
       <Portal.Host>
-        {/* <Tab.Navigator>
-          <Tab.Screen name="Home" component={PokeScreen} />
-          <Tab.Screen name="Home1" component={SettingsScreen} />
-          <Tab.Screen name=" " component={PokeItem} />
-          <Tab.Screen name="Home31" component={SettingsScreen} />
-          <Tab.Screen name="Settings" component={SettingsScreen} />
-        </Tab.Navigator> */}
         <BottomTabNavigator />
       </Portal.Host>
     </NavigationContainer>
