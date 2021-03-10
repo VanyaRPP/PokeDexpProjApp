@@ -12,17 +12,7 @@ import BottomTabNavigator from './routes/BottomTab';
 
 const Tab = createBottomTabNavigator();
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <PokeView
-        url='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
-        color1='#bf2ac9'
-        color2='#3ae831'
-      />
-    </View>
-  );
-}
+
 
 const App = () => {
   return (

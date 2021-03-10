@@ -7,11 +7,10 @@ import { PokeItem } from '../components';
 import { FilterIcon } from '../assets/images/FilterIcon';
 import { PokeBallIcon, RegionsIcon } from '../assets/images';
 import SettingsIcon from '../assets/images/SettingsIcon';
+import MainStackNavigator from './MainStackNavigator';
 
 const BottomTab = createBottomTabNavigator();
-const widthIcon = '28';
-const heightIcon = '25';
-const inactiveTintColor = 'red';
+
 
 const tabs = [
   {
@@ -38,7 +37,7 @@ const tabs = [
   },
   {
     name: 'PokeList',
-    component: PokeItem,
+    component: MainStackNavigator,
     options: {
       tabBarIcon: () =>
         IconNavigation(
@@ -76,8 +75,6 @@ export default function BottomTabNavigator() {
     <BottomTab.Navigator
       initialRouteName="PokeScreen"
       tabBarOptions={{
-        activeTintColor: 'black',
-        inactiveTintColor: 'red',
         style: styles.navigatorStyle,
       }}>
       {tabs.map((screen, index) => {
@@ -95,11 +92,8 @@ export default function BottomTabNavigator() {
 }
 
 
-const IconNavigation = (item, color) => (
-  <View
-    style={{
-
-    }}>
+const IconNavigation = (item) => (
+  <View>
     {item}
   </View>
 );
