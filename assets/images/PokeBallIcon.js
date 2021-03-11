@@ -6,9 +6,7 @@ export const PokeBallIcon = (props) =>{
   return (
     <View
       style={{
-        marginBottom: 20,
-        borderColor: 'black',
-        borderWidth: 1
+        marginBottom: 20
       }}
       >
       <Svg

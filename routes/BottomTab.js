@@ -2,12 +2,10 @@ import React from 'react';
 import styles from './style';
 import { View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { PokeScreen } from '../screen/PokeScreen';
-import { PokeItem } from '../components';
-import { FilterIcon } from '../assets/images/FilterIcon';
-import { PokeBallIcon, RegionsIcon } from '../assets/images';
-import SettingsIcon from '../assets/images/SettingsIcon';
+import { SettingsScreen, PokeScreen } from '../screen';
 import MainStackNavigator from './MainStackNavigator';
+
+import { PokeBallIcon, RegionsIcon, SettingsIcon, FilterIcon } from '../assets/images';
 
 const BottomTab = createBottomTabNavigator();
 
@@ -58,8 +56,8 @@ const tabs = [
     },
   },
   {
-    name: 'Notes',
-    component: PokeScreen,
+    name: 'SettingsScreen',
+    component: SettingsScreen,
     options: {
       tabBarIcon: () =>
         IconNavigation(

@@ -19,5 +19,3 @@ export const LeftArrowIcon = (props) => {
     </Svg>
   )
 }
-
-export default LeftArrowIcon
