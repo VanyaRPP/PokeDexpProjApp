@@ -15,7 +15,7 @@ export const SmallView = styled.View`
   width: 270;
   height: 270;
   border-radius: 150;
-  backgroundColor:white;
+  backgroundColor: #EC2929;
 `;
 export const PokeImage = styled.Image`
   width: 240;

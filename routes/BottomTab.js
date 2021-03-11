@@ -9,15 +9,18 @@ import { PokeBallIcon, RegionsIcon, SettingsIcon, FilterIcon } from '../assets/i
 
 const BottomTab = createBottomTabNavigator();
 
+const inactiveTintColor = 'rgb(0, 122, 255)';
+
 
 const tabs = [
   {
     name: 'Weightlifting',
     component: PokeScreen,
     options: {
-      tabBarIcon: () =>
+      tabBarIcon: ({color}: {color: string}) =>
         IconNavigation(
-          <FilterIcon />
+          <FilterIcon />,
+          color
         ),
       tabBarLabel: ' ',
     },
@@ -26,9 +29,10 @@ const tabs = [
     name: 'Trajectory',
     component: PokeScreen,
     options: {
-      tabBarIcon: () =>
+      tabBarIcon: ({color}: {color: string}) =>
         IconNavigation(
-          <RegionsIcon />
+          <RegionsIcon />,
+          color
         ),
       tabBarLabel: ' ',
     },
@@ -37,9 +41,9 @@ const tabs = [
     name: 'PokeList',
     component: MainStackNavigator,
     options: {
-      tabBarIcon: () =>
+      tabBarIcon: ({color}: {color: string}) =>
         IconNavigation(
-          <PokeBallIcon />
+          <PokeBallIcon />,
         ),
       tabBarLabel: ' ',
     },
@@ -48,9 +52,10 @@ const tabs = [
     name: 'Food',
     component: PokeScreen,
     options: {
-      tabBarIcon: () =>
+      tabBarIcon: ({color}: {color: string}) =>
         IconNavigation(
-          <FilterIcon />
+          <FilterIcon />,
+          color,
         ),
       tabBarLabel: ' ',
     },
@@ -59,9 +64,10 @@ const tabs = [
     name: 'SettingsScreen',
     component: SettingsScreen,
     options: {
-      tabBarIcon: () =>
+      tabBarIcon: ({color}: {color: string}) =>
         IconNavigation(
-          <SettingsIcon />
+          <SettingsIcon />,
+          color
         ),
       tabBarLabel: ' ',
     },
@@ -90,8 +96,18 @@ export default function BottomTabNavigator() {
 }
 
 
-const IconNavigation = (item) => (
-  <View>
+const IconNavigation = (item, color) => (
+  <View
+    style={{
+      paddingTop: 10,
+      paddingBottom: 10,
+      borderBottomColor: color === inactiveTintColor ? 'white' : 'transparent',
+      borderBottomWidth: 3,
+      borderStyle: 'solid',
+      width: 33,
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}>
     {item}
   </View>
 );
