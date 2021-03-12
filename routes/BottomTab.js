@@ -99,7 +99,7 @@ export default function BottomTabNavigator() {
 const IconNavigation = (item, color) => (
   <View
     style={{
-      paddingTop: 10,
+      paddingTop: color === inactiveTintColor ? 10 : 25,
       paddingBottom: 10,
       borderBottomColor: color === inactiveTintColor ? 'white' : 'transparent',
       borderBottomWidth: 3,
