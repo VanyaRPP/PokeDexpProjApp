@@ -1,22 +1,18 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import { LeftArrowIcon } from '../../assets/images'
-import { FilterIcon } from '../../assets/images/FilterIcon'
-import { PokeBallIcon } from '../../assets/images/PokeBallIcon'
 import { PokeView } from '../../components'
+import { PageViewer } from '../../components/PageViewer'
 import { MainView, PokeWrapper } from './style'
-import { useNavigation } from '@react-navigation/native';
-
 
 export const PokeScreen = ({ navigation: { goBack } }) => {
-  const navigation = useNavigation();
   return (
     <MainView>
       <PokeWrapper>
         <TouchableOpacity
-          onPress = {()=> goBack()}
+          onPress={() => goBack()}
         >
-          <LeftArrowIcon/>
+          <LeftArrowIcon />
         </TouchableOpacity>
         <PokeView
           url='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
@@ -24,6 +20,15 @@ export const PokeScreen = ({ navigation: { goBack } }) => {
           color2='#3ae831'
         />
       </PokeWrapper>
+      <View
+        style={{ 
+          flex: 1,
+          backgroundColor: 'violet',
+          marginBottom: 60,
+        }}
+      >
+        <PageViewer />
+      </View>
     </MainView>
   )
 }
