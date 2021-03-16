@@ -5,8 +5,11 @@ export const MainView = styled.View`
   background-color: white;
 `;
 export const PokeWrapper = styled.View`
-  height: 45%;
+  height:40%;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   background-color: #EC2929;
+`;
+export const LeftArrowTouchable = styled.TouchableOpacity`
+  padding-top
 `;

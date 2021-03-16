@@ -2,22 +2,24 @@ import styled from 'styled-components'
 
 export const MainView = styled.View`
   alignItems: center;
+  padding-top: 10%;
 `;
 export const TestView = styled.View`
   alignItems: center;
   justifyContent: center;
-  width: 300;
-  height: 300;
+  width: 220;
+  height: 220;
 `;
 export const SmallView = styled.View`
   alignItems: center;
+  justify-content: center;
   position: absolute;
-  width: 270;
-  height: 270;
+  width: 200;
+  height: 200;
   border-radius: 150;
   backgroundColor: #EC2929;
 `;
 export const PokeImage = styled.Image`
-  width: 240;
-  height: 240;
+  width: 130;
+  height: 130;
 `;

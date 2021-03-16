@@ -1,7 +1,10 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 import PagerView from 'react-native-pager-view';
+import PokeEvolutionScreen from '../../screen/PokeEvolutionScreen';
+import PokeStatsScreen from '../../screen/PokeStatsScreen';
 import { PokeItem } from '../PokeItem';
+
 
 export const PageViewer = () => {
   return (
@@ -11,10 +14,10 @@ export const PageViewer = () => {
         initialPage={0}
       >
         <View key="1">
-          <PokeItem />
+        <PokeStatsScreen />
         </View>
         <View key="2">
-          <Text>Пизда</Text>
+          {/* <Text>Пизда</Text>
           <View
             style={{
               height: 60,
@@ -26,7 +29,8 @@ export const PageViewer = () => {
             <Text>
               ••
         </Text>
-          </View>
+          </View> */}
+          <PokeEvolutionScreen />
         </View>
       </PagerView>
     </>
