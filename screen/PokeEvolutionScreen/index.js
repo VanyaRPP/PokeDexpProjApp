@@ -1,6 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 import { HeartIcon, AttackIcon, DefenseIcon } from '../../assets/images'
+import PokeEvolutionView from '../../components/PokeEvolutionView'
 import PokeHeader from '../../components/PokeHeader'
 import PokeStatsCircle from '../../components/PokeStatsCircle'
 import { CircleView } from '../../components/PokeStatsCircle/style'
@@ -15,34 +16,18 @@ export default function PokeEvolutionScreen() {
       <BigView>
         <FirstRow>
           <Row>
-          <PokeStatsCircle 
-          icon =  {<HeartIcon />}
-          circleText = 'HP'
-          circleNumber= '35'
-          />
+            <PokeEvolutionView />
           </Row>
           <Row>
-          <PokeStatsCircle 
-          icon =  {<AttackIcon />}
-          circleText = 'HUI'
-          circleNumber= '135'
-          />
+            <PokeEvolutionView />
           </Row>
         </FirstRow>
         <SecondRow>
-        <Row>
-          <PokeStatsCircle 
-          icon =  {<DefenseIcon />}
-          circleText = 'HER'
-          circleNumber= '120'
-          />
+          <Row>
+            <PokeEvolutionView />
           </Row>
           <Row>
-          <PokeStatsCircle 
-          icon =  {<HeartIcon />}
-          circleText = 'IDI NAH'
-          circleNumber= '47'
-          />
+            <PokeEvolutionView />
           </Row>
         </SecondRow>
       </BigView>
