@@ -1,6 +1,4 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native'
-import { Header } from 'react-native/Libraries/NewAppScreen'
 import { BorderView, HeaderView, TextEvolution, PokeEvolImg } from './style'
 
 export default function PokeEvolutionView() {

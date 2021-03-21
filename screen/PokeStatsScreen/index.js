@@ -40,7 +40,7 @@ export default function PokeStatsScreen(props) {
           <Row>
           <PokeStatsCircle 
           icon =  {<HeartIcon />}
-          circleText = 'IDI NAH'
+          circleText = 'IDI NAHUI'
           circleNumber= '47'
           />
           </Row>

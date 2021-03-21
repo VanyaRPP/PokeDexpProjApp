@@ -38,7 +38,7 @@ const tabs = [
     },
   },
   {
-    name: 'PokeList',
+    name: 'PokeListScreen',
     component: MainStackNavigator,
     options: {
       tabBarIcon: ({color}: {color: string}) =>
@@ -77,7 +77,7 @@ const tabs = [
 export default function BottomTabNavigator() {
   return (
     <BottomTab.Navigator
-      initialRouteName="PokeScreen"
+      initialRouteName="PokeListScreen"
       tabBarOptions={{
         style: styles.navigatorStyle,
       }}>
