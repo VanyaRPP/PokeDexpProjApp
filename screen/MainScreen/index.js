@@ -7,7 +7,7 @@ export const MainScreen = ({ navigation }) => {
 
   const [PokeList, setPokeList] = useState(obj.getPokeList());
 
-  console.log('poo', PokeList );
+  console.log('poo', PokeList._W.data );
   return (
     <View>
       <Button

@@ -6,21 +6,15 @@ const getPokeData = () =>
 async function getPokeList() {
   try {
     const response = await axios.get(`/pokemon`);
-    console.log(response);
+    console.log('fgh', response.data);
     return response.data;
   } catch (error) {
     console.error(error);
   }
 }
 
-
-
 const getPokeBulba = () =>
   axios.get('pokemon/1');
-
-const po = getPokeData()
-
-console.log('po:', po);
 
 const obj = {
   getPokeData,
