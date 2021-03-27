@@ -1,8 +1,14 @@
 import axios from './axios';
 
-const getPokeData = () =>
-  axios.get(`/`);
-
+async function getPokeData() {
+  try {
+    const response = await axios.get(`/`);
+    console.log('fgh123', response);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
 async function getPokeList() {
   try {
     const response = await axios.get(`/pokemon`);
