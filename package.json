@@ -32,6 +32,7 @@
     "react-native-tab-view": "^2.15.2",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
     "rn-viewpager": "^1.2.9",
+    "rnpm": "^1.9.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
@@ -49,5 +50,10 @@
   },
   "resolutions": {
     "styled-components": "^5"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
   }
 }
