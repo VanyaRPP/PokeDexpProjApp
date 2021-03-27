@@ -5,9 +5,9 @@ import { PokeItem } from '../../components'
 
 export const MainScreen = ({ navigation }) => {
 
-  const [PokeList, setPokeList] = useState(obj.getPokeBulba());
+  const [PokeList, setPokeList] = useState(obj.getPokeList());
 
-  console.log(PokeList);
+  console.log('poo', PokeList );
   return (
     <View>
       <Button

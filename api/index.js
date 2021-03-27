@@ -3,8 +3,17 @@ import axios from './axios';
 const getPokeData = () =>
   axios.get(`/`);
 
-const getPokeList = () =>
-  axios.get(`/pokemon`);
+async function getPokeList() {
+  try {
+    const response = await axios.get(`/pokemon`);
+    console.log(response);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
 
 const getPokeBulba = () =>
   axios.get('pokemon/1');
