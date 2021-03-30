@@ -18,9 +18,16 @@ async function getPokeList() {
     console.error(error);
   }
 }
+async function getPokeBulba() {
+  try {
+    const response = await axios.get(`/pokemon/kakuna`);
+    console.log('hui', response);
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+}
 
-const getPokeBulba = () =>
-  axios.get('pokemon/1');
 
 const obj = {
   getPokeData,

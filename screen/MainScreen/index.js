@@ -9,8 +9,12 @@ export const MainScreen = ({ navigation }) => {
 
   const [PokeList, setPokeList] = useState(obj.getPokeList());
 
-  console.log('poo', PokeList._W );
-  console.log('poo123', PokeBase._W.data );
+  const [PokeBulba, setPokeBulba] = useState(obj.getPokeBulba());
+
+
+  console.log('poo', PokeList.W );
+  console.log('poo123', PokeBase._W );
+  console.log('bulba', PokeBulba.W);
   return (
     <View>
       <Button
