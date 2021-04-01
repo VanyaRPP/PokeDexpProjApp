@@ -12,7 +12,8 @@ import {
   PokeInfoType,
 } from './style';
 
-export const PokeItem = () => {
+export const PokeItem = ({name}) => {
+  console.log('nameItem', name);
   return (
     <MainView>
       <PokeRectangle>
@@ -25,11 +26,11 @@ export const PokeItem = () => {
             <PokeInfoType>
               <ImageItem
                 source={{
-                  uri: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
+                  uri: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/100.png'
                 }}
               />
               <PokeType>
-                <TextInfo>Bulbusaur</TextInfo>
+                <TextInfo>{name}</TextInfo>
                 <TextInfo>Grass</TextInfo>
                 <TextInfo>Poison</TextInfo>
               </PokeType>

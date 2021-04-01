@@ -3,7 +3,7 @@ import axios from './axios';
 async function getPokeData() {
   try {
     const response = await axios.get(`/`);
-    console.log('fgh123', response);
+    // console.log('fgh123', response);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -18,10 +18,10 @@ async function getPokeList() {
     console.error(error);
   }
 }
-async function getPokeBulba() {
+async function getPokeInfo({name}) {
   try {
-    const response = await axios.get(`/pokemon/kakuna`);
-    console.log('hui', response);
+    const response = await axios.get(`/pokemon/${name}`);
+    // console.log('hui', response);
     return response;
   } catch (error) {
     console.error(error);
@@ -32,7 +32,7 @@ async function getPokeBulba() {
 const obj = {
   getPokeData,
   getPokeList,
-  getPokeBulba,
+  getPokeInfo,
 };
 
 export default obj;

@@ -3,10 +3,9 @@ import { Dimensions } from 'react-native';
 
 const window = Dimensions.get("window").width;
 
-
-export const PokeRectangle = styled.TouchableOpacity`
+// POKERECT WAS TOUCHABLEOPAC
+export const PokeRectangle = styled.View` 
   display: flex;
-  margin-top: 50px;
   width: ${window-40};
   /* border-color: black;
   border-width: 1px;
