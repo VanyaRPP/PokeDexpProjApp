@@ -7,19 +7,16 @@ export const MainScreen = ({ navigation }) => {
 
   const [PokeBase, setPokeBase] = useState(obj.getPokeData());
 
-  const [PokeList, setPokeList] = useState(obj.getPokeList());
+  const [PokeList, setPokeList] = useState([]);
 
-  // const [PokeData, setPokeData] = useState([])
+  const [PokeData, setPokeData] = useState();
 
-  // useEffect(() => {
-  //   setPokeData(PokeList._W.results)
-  // }, [PokeList])
-  const rez = PokeList?._W?.results
 
-  // console.log('rez', rez );
-  // console.log('poo123', PokeBase._W );
-  // console.log('bulba', PokeBulba.W);
-
+  useEffect(() => {
+    setPokeList(obj.getPokeList())
+    setPokeData(PokeList?._W?.results)
+  },[])
+  console.log('hui', PokeData);
   return (
     <View>
       <Button
@@ -28,7 +25,7 @@ export const MainScreen = ({ navigation }) => {
       />
       <ScrollView>
         {
-          rez?.map((i) => {
+          PokeData?.map((i) => {
             return (
               <TouchableOpacity 
                 key={i.name}
@@ -46,3 +43,4 @@ export const MainScreen = ({ navigation }) => {
     </View>
   )
 }
+

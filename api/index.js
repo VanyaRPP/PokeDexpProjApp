@@ -20,9 +20,9 @@ async function getPokeList() {
 }
 async function getPokeInfo({name}) {
   try {
-    const response = await axios.get(`/pokemon/${name}`);
-    // console.log('hui', response);
-    return response;
+    const response = await axios.get(`/pokemon/${name}`)
+    // console.log('res', response.data);
+    return response.data;
   } catch (error) {
     console.error(error);
   }

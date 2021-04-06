@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState, useEffect } from 'react'
 import { Text } from 'react-native';
 import { MainView } from '../PokeView/style'
+import obj from '../../api'
 import LinearGradient from 'react-native-linear-gradient';
 import {
   PokeRectangle,
@@ -13,7 +14,16 @@ import {
 } from './style';
 
 export const PokeItem = ({name}) => {
-  console.log('nameItem', name);
+  const [pokeInfo, setPokeInfo] = useState([])
+  const [pokeInfoEff, setpokeInfoEff] = useState([])
+  const [pokeImage, setPokeImage] = useState()
+  useEffect(() => {
+    setPokeInfo(obj.getPokeInfo({name}))
+    setpokeInfoEff(pokeInfo?._W)
+    setPokeImage(pokeInfoEff?.sprites)
+  }, [])
+  console.log('eff',pokeInfoEff);
+  console.log('img', pokeImage);
   return (
     <MainView>
       <PokeRectangle>

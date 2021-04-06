@@ -74,7 +74,7 @@ const tabs = [
   },
 ];
 
-export default function BottomTabNavigator() {
+export default function BottomTabNavigator(props) {
   return (
     <BottomTab.Navigator
       initialRouteName="PokeListScreen"
