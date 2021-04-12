@@ -16,14 +16,16 @@ import {
 export const PokeItem = ({name}) => {
   const [pokeInfo, setPokeInfo] = useState([])
   const [pokeInfoEff, setpokeInfoEff] = useState([])
-  const [pokeImage, setPokeImage] = useState()
+  const [pokeImage, setPokeImage] = useState();
   useEffect(() => {
     setPokeInfo(obj.getPokeInfo({name}))
-    setpokeInfoEff(pokeInfo?._W)
-    setPokeImage(pokeInfoEff?.sprites)
-  }, [])
-  console.log('eff',pokeInfoEff);
-  console.log('img', pokeImage);
+    setpokeInfoEff(pokeInfo?._W?.sprites?.front_default)
+  }, [])  
+  const id = pokeInfo?._W?.id
+  console.log(pokeInfo?._W?.id);
+  console.log('eff', pokeInfoEff);
+  console.log('f');
+
   return (
     <MainView>
       <PokeRectangle>
@@ -36,7 +38,7 @@ export const PokeItem = ({name}) => {
             <PokeInfoType>
               <ImageItem
                 source={{
-                  uri: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/100.png'
+                  uri: 'pokeInfoEff'
                 }}
               />
               <PokeType>
@@ -45,7 +47,7 @@ export const PokeItem = ({name}) => {
                 <TextInfo>Poison</TextInfo>
               </PokeType>
             </PokeInfoType>
-            <PokeIndex>001</PokeIndex>
+            <PokeIndex>{id}</PokeIndex>
           </PokeInfo>
         </LinearGradient>
       </PokeRectangle>

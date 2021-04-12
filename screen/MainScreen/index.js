@@ -17,6 +17,7 @@ export const MainScreen = ({ navigation }) => {
     setPokeData(PokeList?._W?.results)
   },[])
   console.log('hui', PokeData);
+  
   return (
     <View>
       <Button

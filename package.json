@@ -31,6 +31,7 @@
     "react-native-svg": "^12.1.0",
     "react-native-tab-view": "^2.15.2",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
+    "redux": "^4.0.5",
     "rn-viewpager": "^1.2.9",
     "rnpm": "^1.9.0",
     "styled-components": "^5.2.1"
