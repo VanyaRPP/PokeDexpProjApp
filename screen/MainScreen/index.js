@@ -5,7 +5,7 @@ import { PokeItem } from '../../components'
 
 export const MainScreen = ({ navigation }) => {
 
-  const [PokeBase, setPokeBase] = useState(obj.getPokeData());
+  // const [PokeBase, setPokeBase] = useState(obj.getPokeData());
 
   const [PokeList, setPokeList] = useState([]);
 
@@ -13,9 +13,11 @@ export const MainScreen = ({ navigation }) => {
 
 
   useEffect(() => {
-    setPokeList(obj.getPokeList())
-    setPokeData(PokeList?._W?.results)
-  },[])
+    setPokeList(obj.getPokeList());
+    setPokeData(PokeList?._W?.results);
+    console.log('huiineffect', PokeData);
+  },[ ])
+
   console.log('hui', PokeData);
   
   return (

@@ -14,13 +14,16 @@ import {
 } from './style';
 
 export const PokeItem = ({name}) => {
-  const [pokeInfo, setPokeInfo] = useState([])
-  const [pokeInfoEff, setpokeInfoEff] = useState([])
+  
+  const [pokeInfo, setPokeInfo] = useState(obj.getPokeInfo({name}))
+  const [pokeInfoEff, setpokeInfoEff] = useState('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png')
   const [pokeImage, setPokeImage] = useState();
+
   useEffect(() => {
     setPokeInfo(obj.getPokeInfo({name}))
     setpokeInfoEff(pokeInfo?._W?.sprites?.front_default)
-  }, [])  
+    console.log('effPIZDE', pokeInfoEff);
+  }, [name])  
   const id = pokeInfo?._W?.id
   console.log(pokeInfo?._W?.id);
   console.log('eff', pokeInfoEff);
@@ -38,7 +41,7 @@ export const PokeItem = ({name}) => {
             <PokeInfoType>
               <ImageItem
                 source={{
-                  uri: 'pokeInfoEff'
+                  uri: pokeInfoEff
                 }}
               />
               <PokeType>
